@@ -3,10 +3,10 @@ un projet qui consiste à faire des tuto d'installation de serveur
 
 ## [VSFTPD](https://github.com/heiherilala/servers/tree/main/VSFTPD)
 
-## [NFS](youtub.com)
+## [NFS](https://github.com/heiherilala/servers/tree/main/NFS)
 
-## [NGINX](youtub.com)
+## [NGINX](https://github.com/heiherilala/servers/tree/main/NGINX)
 
-## [SAMBA](youtub.com)
+## [SAMBA](https://github.com/heiherilala/servers/tree/main/SAMBA)
 
-## [VSFTPD](youtub.com)
+## [VSFTPD](https://github.com/heiherilala/servers/tree/main/VSFTPD)
