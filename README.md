@@ -1,7 +1,7 @@
 # Instalatin servers
 un projet qui consiste à faire des tuto d'installation de serveur
 
-## [VSFTPD](/VSFTPD/)
+## [VSFTPD](https://github.com/heiherilala/servers#vsftpd)
 
 ## [NFS](youtub.com)
 
