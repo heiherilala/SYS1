@@ -1,9 +1,9 @@
 # Installation te configuration server Nginx
-## I- Présentation
+## Présentation
 Le Nginx (prononcé comme Engine-X) est un logiciel qui peut agir à la fois comme un serveur Web et un serveur proxy. Vous pouvez diffuser du contenu Web via le serveur Nginx. Grâce aux fonctionnalités de proxy et de proxy inverse du serveur Nginx, vous pouvez également l’utiliser comme routeur. L’équilibrage du trafic, la mise en cache et d’autres opérations du serveur peuvent être effectués par le serveur Nginx. Vous pouvez installer le serveur Nginx sur n’importe quel serveur cloud, moteur docker ou machine Linux locale. L’algorithme du serveur Nginx est très bénéfique pour ceux qui ont un serveur commercial. Comme Ubuntu exécute la plupart des serveurs Web dans le monde, vous pouvez installer le serveur Nginx sur votre machine Ubuntu pour de meilleures performances.
 
-## II- INSTALLATION
-### 1- Installation
+## INSTALLATION
+### Installation
 Avant tout pour ne pas se confronté à des problèmes éventuels mettant à jour le système avec :
 ```
 $ apt updat
@@ -17,7 +17,7 @@ Normalement, le server demarera automatiquement, mais si il ne se demare pas il 
 $ systemectl restart nginx
 ```
 
-### 2- Configuration
+### Configuration
 Les configurations se trouve dans : /etc/nginx/sites-enabled/ nom « default »
 ```
 $ cd /etc/nginx/sites-enabled

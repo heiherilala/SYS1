@@ -29,18 +29,20 @@ $ nano exports
 Ou en va ajouter : /home/herilala/partage/ *(sync,no_root_squash,rw)             
 Avec :            
 /home/herilala/partage/ => est le chemin du dossier à partager             
-* => liste des adresse IP qui pourront y accéder (ici « * » veut dire tout le monde)                 
-Sync => permet au server NFS de répondre au demande juste après que la requête soit pris en charge par l’unité de stockage. C’est le contraire de async                 
-no_root_squash => stipule que le root de la machine sur laquelle le répertoire est mont a le doit root sur le répertoire                  
-rw => donne le droit lire et écrire sur les clients               
+-"*" => liste des adresse IP qui pourront y accéder (ici « * » veut dire tout le monde)                 
+-"Sync" => permet au server NFS de répondre au demande juste après que la requête soit pris en charge par l’unité de stockage. C’est le contraire de "async"                
+-"no_root_squash" => stipule que le root de la machine sur laquelle le répertoire est mont a le doit root sur le répertoire                  
+-"rw" => donne le droit lire et écrire sur les clients               
 
-Démarré le server            
-Pour démarrer :              
-$ systemctl start nfs-kernel-server -y            
+Démarré le server              
+Pour démarrer :           
+```
+$ systemctl start nfs-kernel-server -y    
+```
 Maintenant le serveur marche.             
 
-##Installation coté client
-###Installation
+## Installation coté client
+### Installation
 Pour pouvoir utiliser un server nfs :
 ```
 $ apt-get install nfs-common
@@ -49,7 +51,8 @@ Ensuit construisant un dossier où on va monter le dossier
 ```
 $ mkdir estpartager
 ```
-###Monter le dossier
+
+### Monter le dossier
 Tout d’abord, vérifiant s’il existe un disque à monter venant du server :
 ```
 $ showmount -e 192.168.227.3 (c’est l’IP du server)
