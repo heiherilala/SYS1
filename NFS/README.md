@@ -72,20 +72,20 @@ Ou:
 Maintenant, faisons une vérification :             
 Dans le serveur : construisant un fichier texte dans le dossier à partager         
 ```
-$ cd /hom/herilala/partage/
-$ toush essai.text
+$ cd /home/herilala/partage/
+$ touch essai.text
 ```
 Maintenant si on regarde le dossier dans la machine client, nous pouvons bien voir qu’un fichier nommé « **essai.tex** » a bien été ajouté             
 
 Ensuit, dans la machine client, modifions le fichier « essai.tex »:              
 ```
-$ nano essai.tex
+$ nano essai.text
 ```
 Ajoutons « voici une phrase » dedans           
 
 Si on revient dans l’ordinateur serveur, on voit bien que le fichier a été modifié, avec :             
 ```
-$ cat essai.tex 
+$ cat essai.text 
 ```
 Maintenant on peut affirmer que le serveur marche bien            
 
