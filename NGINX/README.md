@@ -4,27 +4,27 @@ Le Nginx (prononcé comme Engine-X) est un logiciel qui peut agir à la fois com
 
 ## INSTALLATION
 ### Installation
-Avant tout pour ne pas se confronté à des problèmes éventuels mettant à jour le système avec :
+Avant tout pour ne pas se confronter à des problèmes éventuels mettant à jour le système avec :
 ```
 $ apt updat
 ```
-Pour installer le server utilisant :
+Pour installer le serveur utilisant :
 ```
 $ apt install nginx
 ```
-Normalement, le server demarera automatiquement, mais si il ne se demare pas il n’y a que le faire manielement avec :
+Normalement, le serveur démarrera automatiquement, mais s’il ne se démarre pas il faut le faire manuellement avec :
 ```
 $ systemectl restart nginx
 ```
 
 ### Configuration
-Les configurations se trouve dans : /etc/nginx/sites-enabled/ nom « default »
+Les configurations se trouvent dans : /etc/nginx/sites-enabled/ nom « default »
 ```
 $ cd /etc/nginx/sites-enabled
 $ nano default
 ```
 
-Si on enlevé les comentaire, on trouvera : 
+Si on enlève les commentaires, on trouvera : 
 
 ```
 server {
@@ -45,34 +45,34 @@ server {
 Explication :
 
 * **listen 80;** => il écoute par défaut sur le port 80    
-* **server_name _;** => c’est le nom du serveur, qui peu aussi être un nom de domaine     
-* **root /var/www/html;** => indique ou est le fichier a ouvrire    
-* **index index.html index.nginx-debian.html;** => ouvrire “intex” , si on ne le trouve pas, ouvreire « index.html », si non, ouvrire « index.nginx-debian.html »     
+* **server_name _;** => c’est le nom du serveur, qui peut aussi être un nom de domaine.     
+* **root /var/www/html;** => indique où est le fichier à ouvrir.    
+* **index index.html index.nginx-debian.html;** => ouvrire “intex” , si on ne le trouve pas, ouvrière « index.html », sinon, ouvrir « index.nginx-debian.html »     
 
 ## Modification du site :
-Si on n'a pas changé  « **root /var/www/html;** », alors, il faut mettre nos dossier dans « **/var/www/html** » et les modifier      
+Si on ne change pas « root /var/www/html; », alors, il faut mettre nos dossiers dans « /var/www/html » et les modifier      
 
-On n’oublie pas de redémarre le server      
+On n’oublie pas de redémarrer le serveur      
 
 ```
 $ systemectl restart nginx 
 ```
-Et voilà notre serveur est terminer et nous savons où modifier notre site
+Et voilà notre serveur est terminé et nous savons où modifier notre site
 
 ## Modifier nom de domaine :
 Modifions de fichier **/etc/hosts**     
 
 Et ajouton **« 127.0.0.1       monsite.mg »**       
 
-Maitenant si on ecrie « monsite.mg » il nous dirigera automatiquement ver notre site        
+Maintenant si on écrit « monsite.mg » il nous dirigera automatiquement ver notre site        
 
-Si on regarde aussi le fichier /etc/nginx/nginx.conf ; on voit que dan http il y est ecrit : « include /etc/nginx/sites-enabled/*; »       
+Si on regarde aussi le fichier /etc/nginx/nginx.conf ; on voit que dans http il y est écrit : « include /etc/nginx/sites-enabled/*; »       
 
-Cela veut dire que tous les fichiers qui se trouve dans le dossier « /etc/nginx/sites-enabled/ » serons prise en compte par le server pour la configuration du http ;             
+Cela veut dire que tous les fichiers qui se trouvent dans le dossier « /etc/nginx/sites-enabled/ » seront pris en compte par le serveur pour la configuration du http ;             
 
-Donc créant un nouveau server qui prend en compte seulement notre nom de domaine :               
+Donc créant un nouveau serveur qui prend en compte seulement notre nom de domaine :               
 
-Dans ce dossier créons un nouveau fichier ou on va éditer un serveur :             
+Dans ce dossier, créons un nouveau fichier ou on va éditer un serveur :             
 
 ```
 $toush autreserver.conf
@@ -90,14 +90,14 @@ server {
         }
 ```
 
-Ici, dans server_name monsite.mg => on a défini notre nom de domaine                
+Ici, dans server_name monsite.mg => on a défini notre nom de domaine                   
 
 Et dans root /var/www/html; => on a pointé une autre emplacement               
 
 Par conséquent :              
 
-* Si on entre dan notre url Adress IP : il nous enverra dans la page qui se trouve dans l’emplacement définit par /etc/nginx/sites-enabled/default                       
-* Si on entre dans notre url monsite.mg: il nous enverra dans la page qui se trouve dans l’emplacement définit par /etc/nginx/sites-enabled/ autreserver.conf                      
+* Si on entre dan notre url Adress IP : il nous enverra dans la page qui se trouve dans l’emplacement définit par /etc/nginx/sites-enabled/default                          
+* Si on entre dans notre url monsite.mg: il nous enverra dans la page qui se trouve dans l’emplacement définit par /etc/nginx/sites-enabled/ autreserver.conf                   
 
 
 
