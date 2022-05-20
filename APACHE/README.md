@@ -102,7 +102,7 @@ a2ensite /etc/apache2/sites-enabled/001-siteherilala.conf
 systemctl restart apache2
 ```
 
-#### 2Outil de vérification d’erreur de configuration
+#### Outil de vérification d’erreur de configuration
 Pour afficher les erreurs de configuration, nous avons l’outil configtest d’apache2:
 ```
 /user/sbin/apache2ctl configtest
@@ -110,40 +110,6 @@ Pour afficher les erreurs de configuration, nous avons l’outil configtest d’
 
 ## Partie 3 - ACCÈS AU SITE WEB 
 Il sufi de saisir l'adresse IP et le port du serveur (80 par défaut) ou le nom du domaine
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

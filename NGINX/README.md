@@ -44,16 +44,13 @@ server {
 
 Explication :
 
-listen 80; => il écoute par défaut sur le port 80    
-
-server_name _; => c’est le nom du serveur, qui peu aussi être un nom de domaine     
-
-root /var/www/html; => indique ou est le fichier a ouvrire    
-
-index index.html index.nginx-debian.html; => ouvrire “intex” , si on ne le trouve pas, ouvreire « index.html », si non, ouvrire « index.nginx-debian.html »     
+* **listen 80;** => il écoute par défaut sur le port 80    
+* **server_name _;** => c’est le nom du serveur, qui peu aussi être un nom de domaine     
+* **root /var/www/html;** => indique ou est le fichier a ouvrire    
+* **index index.html index.nginx-debian.html;** => ouvrire “intex” , si on ne le trouve pas, ouvreire « index.html », si non, ouvrire « index.nginx-debian.html »     
 
 ## Modification du site :
-Si on ne change pas « root /var/www/html; », alors, il faut mettre nos dossier dans « /var/www/html » et les modifier      
+Si on n'a pas changé  « **root /var/www/html;** », alors, il faut mettre nos dossier dans « **/var/www/html** » et les modifier      
 
 On n’oublie pas de redémarre le server      
 
@@ -63,9 +60,9 @@ $ systemectl restart nginx
 Et voilà notre serveur est terminer et nous savons où modifier notre site
 
 ## Modifier nom de domaine :
-Modifions de fichier /etc/hosts     
+Modifions de fichier **/etc/hosts**     
 
-Et ajouton « 127.0.0.1       monsite.mg »       
+Et ajouton **« 127.0.0.1       monsite.mg »**       
 
 Maitenant si on ecrie « monsite.mg » il nous dirigera automatiquement ver notre site        
 
@@ -99,8 +96,8 @@ Et dans root /var/www/html; => on a pointé une autre emplacement
 
 Par conséquent :              
 
-	=>Si on entre dan notre url Adress IP : il nous enverra dans la page qui se trouve dans l’emplacement définit par /etc/nginx/sites-enabled/default                       
-	=>Si on entre dans notre url monsite.mg: il nous enverra dans la page qui se trouve dans l’emplacement définit par /etc/nginx/sites-enabled/ autreserver.conf                      
+* Si on entre dan notre url Adress IP : il nous enverra dans la page qui se trouve dans l’emplacement définit par /etc/nginx/sites-enabled/default                       
+* Si on entre dans notre url monsite.mg: il nous enverra dans la page qui se trouve dans l’emplacement définit par /etc/nginx/sites-enabled/ autreserver.conf                      
 
 
 
